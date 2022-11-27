@@ -1,8 +1,67 @@
     <!-- <h1 class="mb-3">DETAILS</h1>
         <form #form="ngForm" (ngSubmit)="updatePolicy()">
           <div class="mb-3">
-                  <input type="text" class="form-control" id="details" name="details" [(ngModel)]="policydetails.details">
+                  <input type="text" class="form-control" id="policyName" name="policyName" [(ngModel)]="policydetails.policyName">
                 </div>
          
-        </form>
-   -->
+        </form> -->
+
+        <!------------------------->
+
+        <div class="container my-5">
+          <h1 class="mb-5" style="color:plum;">
+      {{policylist.policyName}}
+          </h1>
+          <div class="row">
+            <div class="col-6">
+              <form >
+             
+        
+                <div class="mb-3">
+                  <label for="policyName" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Policy Name</label>
+                  <input type="text" class="form-control" id="policyName" name="policyName"
+                    [(ngModel)]="policylist.policyName" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+                </div>
+        
+                <div class="mb-3">
+                  <label for="insuranceTye" class="form-label"style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">InsuranceType</label>
+                  <input type="text" class="form-control" id="insuranceTye" name="insuranceTye"
+                    [(ngModel)]="policylist.insuranceTye" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+                </div>
+        
+                <div class="mb-3">
+                  <label for="ageLimit" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">AgeLimit</label>
+                  <input type="text" class="form-control" id="ageLimit" name="ageLimit" [(ngModel)]="policylist.ageLimit" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+                </div>
+        
+                
+        <div class="mb-3">
+          <label for="minimumAmount" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Minimum Amount</label>
+          <input type="currency" class="form-control" id="minimumAmount" name="minimumAmount" [(ngModel)]="policylist.minimumAmount" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+        </div>
+
+        <div class="mb-3">
+          <label for="maximumAmount" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Maximum Amount</label>
+          <input type="text" class="form-control" id="maximumAmount" name="maximumAmount" [(ngModel)]="policylist.maximumAmount" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+        </div>
+
+        <div class="mb-3">
+          <label for="minDuration" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Minimum Duration(Years)</label>
+          <input type="text" class="form-control" id="minDuration" name="minDuration" [(ngModel)]="policylist.minDuration" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+        </div>
+
+        <div class="mb-3">
+          <label for="maxDuration" class="form-label" style="font-family:Georgia, 'Times New Roman', Times, serif ;font-weight:900;font-size:x-large">Maximum Duration(Years)</label>
+          <input type="text" class="form-control" id="maxDuration" name="maxDuration" [(ngModel)]="policylist.maxDuration" [readonly]="true" style="font-size:large ; color:teal;font-weight:bolder">
+        </div>
+
+        
+                      
+        <button type="button" class="btn btn-primary m-2"><a [routerLink]="['/PolicyList','apply',policylist.id]"  style="color:white;text-decoration:none">Apply</a></button>
+                <!-- <button type="submit" class="btn btn-primary" >Apply</button> -->
+              </form>
+            </div>                                                                   
+           
+        </div>
+    
+        

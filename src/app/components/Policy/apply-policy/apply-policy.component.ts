@@ -1,27 +1,25 @@
 import { Component, OnInit } from '@angular/core';
-import { PoliciesService } from 'src/app/Services/policies.service';
 import { Policy } from 'src/app/Models/Policy.model';
+import { PoliciesService } from 'src/app/Services/policies.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  selector: 'app-details-policy',
-  templateUrl: './details-policy.component.html',
-  styleUrls: ['./details-policy.component.css']
+  selector: 'app-apply-policy',
+  templateUrl: './apply-policy.component.html',
+  styleUrls: ['./apply-policy.component.css']
 })
-export class DetailsPolicyComponent implements OnInit {
-
-
-  policylist:Policy ={
-    id:0,
+export class ApplyPolicyComponent implements OnInit {
+ applypolicy:Policy={
+  id:0,
   policyName:'',
   insuranceTye:'',
   ageLimit:'',
   minimumAmount:0,
   maximumAmount:0,
   minDuration:0,
-  maxDuration:0
-  };
+  maxDuration:0  
 
+ };
   constructor(private route:ActivatedRoute,private policyservice:PoliciesService,private router:Router){}
   ngOnInit(): void {
     this.route.paramMap.subscribe({
@@ -31,20 +29,11 @@ export class DetailsPolicyComponent implements OnInit {
        if(id){
           this.policyservice.getPolicy(id).subscribe({
             next:(response) => {
-                 this.policylist = response;
+                 this.applypolicy = response;
             }
           })
        }
       }
     })
   }
-
-  // updatePolicy(){
-  //   this.policyservice.updatePolicy(this.policylist.id,this.policylist).subscribe({
-  //     next:(response)=>{
-  //          this.router.navigate(['poli-list']);
-  //     }
-  //   })
-
-  // }
 }

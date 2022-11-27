@@ -5,13 +5,13 @@
       <form #form="ngForm" (ngSubmit)="updatePolicy()">
         <!-- <div class="mb-3">
                 <label for="policyName" class="form-label">id</label>
-                <input type="id" class="form-control" id="policyName" name="id" [(ngModel)]="policydetails.id">
+                <input type="number" class="form-control" id="policyName" name="id" [(ngModel)]="policydetails.id">
               </div> -->
 
         <div class="mb-3">
           <label for="policyName" class="form-label">Policy Name</label>
           <input type="text" class="form-control" id="policyName" name="policyName"
-            [(ngModel)]="policydetails.policyName">
+            [(ngModel)]="policydetails.policyName" >
         </div>
 
         <div class="mb-3">
@@ -24,6 +24,26 @@
           <label for="ageLimit" class="form-label">AgeLimit</label>
           <input type="text" class="form-control" id="ageLimit" name="ageLimit" [(ngModel)]="policydetails.ageLimit">
         </div>
+          
+        <div class="mb-3">
+          <label for="minimumAmount" class="form-label">Minimum Amount</label>
+          <input type="number" class="form-control" id="minimumAmount" name="minimumAmount" [(ngModel)]="policydetails.minimumAmount">
+        </div>
+
+        <div class="mb-3">
+          <label for="maximumAmount" class="form-label">Maximum Amount</label>
+          <input type="number" class="form-control" id="maximumAmount" name="maximumAmount" [(ngModel)]="policydetails.maximumAmount">
+        </div>
+
+        <div class="mb-3">
+          <label for="minDuration" class="form-label">Minimum Duration</label>
+          <input type="number" class="form-control" id="minDuration" name="minDuration" [(ngModel)]="policydetails.minDuration">
+        </div>
+
+        <div class="mb-3">
+          <label for="maxDuration" class="form-label">Maximum Duration</label>
+          <input type="number" class="form-control" id="maxDuration" name="maxDuration" [(ngModel)]="policydetails.maxDuration">
+        </div>
 
         <!-- <div class="mb-3">
                 <label for="details" class="form-label">Details</label><br/> 
@@ -33,7 +53,7 @@
 
               
 
-        <button type="submit" class="btn btn-primary ">Save Policy</button>
+        <button type="submit" class="btn btn-primary">Save Policy</button>
         <button type="button" class="btn btn-danger m-4" (click)="deletePolicy(policydetails.id)">Delete Policy</button>
       </form>
     </div>

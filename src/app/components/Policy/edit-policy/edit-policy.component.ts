@@ -15,8 +15,10 @@ policydetails:Policy={
   policyName:'',
   insuranceTye:'',
   ageLimit:'',
-  minimumAmount:'',
-  maximumAmount:''
+  minimumAmount:0,
+  maximumAmount:0,
+  minDuration:0,
+  maxDuration:0,
 
 };
   constructor(private route:ActivatedRoute,private policyservice:PoliciesService,private router:Router){}
@@ -38,7 +40,7 @@ policydetails:Policy={
 
   updatePolicy(){
     this.policyservice.updatePolicy(this.policydetails.id,this.policydetails).subscribe({
-      next:(response)=>{
+      next:()=>{
            this.router.navigate(['poli-list']);
       }
     })

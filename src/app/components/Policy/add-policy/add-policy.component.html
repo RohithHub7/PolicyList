@@ -13,10 +13,16 @@
                 <label for="insuranceTye" class="form-label">InsuranceType</label>
                 <input type="text" class="form-control" id="insuranceTye" name="insuranceTye" [(ngModel)]="addPolicyRequest.insuranceTye" >
               </div>
+
               <div class="mb-3">
                 <label for="ageLimit" class="form-label">AgeLimit</label>
                 <input type="text" class="form-control" id="ageLimit" name="ageLimit" [(ngModel)]="addPolicyRequest.ageLimit" >
               </div>
+              <div class="mb-3">
+                <label for="ageLimit" class="form-label">Minimum mount</label>
+                <input type="text" class="form-control" id="minimumAmount" name="minimumAmount" [(ngModel)]="addPolicyRequest.minimumAmount" >
+              </div>
+               
               <!-- <div class="mb-3">
                 <label for="Details" class="form-label">Details</label><br/> 
                 <input type="text" class="form-control" id="Details" name="Details" [(ngModel)]="addPolicyRequest.Details">

@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { EditPolicyComponent } from './components/Policy/edit-policy/edit-policy.component';
 import { DetailsPolicyComponent } from './components/Policy/details-policy/details-policy.component';
 import { RouterOutlet } from '@angular/router';
+import { ApplyPolicyComponent } from './components/Policy/apply-policy/apply-policy.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RouterOutlet } from '@angular/router';
     PoliListComponent,
     AddPolicyComponent,
     EditPolicyComponent,
-    DetailsPolicyComponent
+    DetailsPolicyComponent,
+    ApplyPolicyComponent,
+   
   ],
   imports: [
     BrowserModule,
