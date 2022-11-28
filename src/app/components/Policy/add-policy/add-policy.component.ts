@@ -15,10 +15,9 @@ addPolicyRequest:Policy={
   policyName:'',
   insuranceTye:'',
   ageLimit:'',
-  minimumAmount:0,
-  maximumAmount:0,
-  minDuration:0,
-  maxDuration:0
+  premiumAmount:0,
+  duration:0,
+  coverAmount:0
 
 };
 policy= new Policy();

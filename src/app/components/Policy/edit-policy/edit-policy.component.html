@@ -26,31 +26,23 @@
         </div>
           
         <div class="mb-3">
-          <label for="minimumAmount" class="form-label">Minimum Amount</label>
-          <input type="number" class="form-control" id="minimumAmount" name="minimumAmount" [(ngModel)]="policydetails.minimumAmount">
+          <label for="premiumAmount" class="form-label">Premium Amount</label>
+          <input type="number" class="form-control" id="premiumAmount" name="premiumAmount" [(ngModel)]="policydetails.premiumAmount">
         </div>
 
         <div class="mb-3">
-          <label for="maximumAmount" class="form-label">Maximum Amount</label>
-          <input type="number" class="form-control" id="maximumAmount" name="maximumAmount" [(ngModel)]="policydetails.maximumAmount">
+          <label for="maximumAmount" class="form-label">Duration</label>
+          <input type="number" class="form-control" id="maximumAmount" name="maximumAmount" [(ngModel)]="policydetails.duration">
         </div>
 
         <div class="mb-3">
-          <label for="minDuration" class="form-label">Minimum Duration</label>
-          <input type="number" class="form-control" id="minDuration" name="minDuration" [(ngModel)]="policydetails.minDuration">
+          <label for="minDuration" class="form-label">Cover Amount</label>
+          <input type="number" class="form-control" id="minDuration" name="minDuration" [(ngModel)]="policydetails.coverAmount">
         </div>
 
-        <div class="mb-3">
-          <label for="maxDuration" class="form-label">Maximum Duration</label>
-          <input type="number" class="form-control" id="maxDuration" name="maxDuration" [(ngModel)]="policydetails.maxDuration">
-        </div>
+      
 
-        <!-- <div class="mb-3">
-                <label for="details" class="form-label">Details</label><br/> 
-                <input type="text" class="form-control" id="details" name="details" [(ngModel)]="policydetails.details">
-                <textarea name="message" rows="auto" cols="auto" placeholder="Details"[(ngModel)]="policydetails.Details" ></textarea>
-              </div> -->
-
+       
               
 
         <button type="submit" class="btn btn-primary">Save Policy</button>

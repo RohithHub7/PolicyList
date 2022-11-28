@@ -18,11 +18,24 @@
                 <label for="ageLimit" class="form-label">AgeLimit</label>
                 <input type="text" class="form-control" id="ageLimit" name="ageLimit" [(ngModel)]="addPolicyRequest.ageLimit" >
               </div>
+              
               <div class="mb-3">
-                <label for="ageLimit" class="form-label">Minimum mount</label>
-                <input type="text" class="form-control" id="minimumAmount" name="minimumAmount" [(ngModel)]="addPolicyRequest.minimumAmount" >
+                <label for="premiumAmount" class="form-label">Premium Amount</label>
+                <input type="number" class="form-control" id="premiumAmount" name="premiumAmount" [(ngModel)]="addPolicyRequest.premiumAmount" >
               </div>
                
+              <div class="mb-3">
+                <label for="duration" class="form-label">Duration(Years)</label>
+                <input type="number" class="form-control" id="duration" name="duration" [(ngModel)]="addPolicyRequest.duration" >
+              </div>
+               
+
+              <div class="mb-3">
+                <label for="coverAmount" class="form-label">Cover Amount</label>
+                <input type="number" class="form-control" id="coverAmount" name="coverAmount" [(ngModel)]="addPolicyRequest.coverAmount" >
+              </div>
+
+
               <!-- <div class="mb-3">
                 <label for="Details" class="form-label">Details</label><br/> 
                 <input type="text" class="form-control" id="Details" name="Details" [(ngModel)]="addPolicyRequest.Details">

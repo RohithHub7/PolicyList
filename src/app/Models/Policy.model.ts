@@ -6,11 +6,9 @@ export class Policy {
     policyName: string;
     insuranceTye: string;
     ageLimit: string;
-    minimumAmount: number;
-    maximumAmount: number;
-    minDuration: number;
-    maxDuration:number;
-
+    premiumAmount:number;
+    duration:number; 
+    coverAmount:number;
 
     /**
      *
@@ -20,11 +18,8 @@ export class Policy {
         this.policyName = '';
         this.insuranceTye = '';
         this.ageLimit = '';
-        this.minimumAmount = 0;
-        this.maximumAmount = 0;
-        this.minDuration = 0;
-        this.maxDuration = 0;
-
-
+        this.premiumAmount=0;
+        this.duration=0; 
+        this.coverAmount=0;  
     }
 }
